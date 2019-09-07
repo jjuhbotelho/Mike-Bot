@@ -14,12 +14,10 @@ bot = commands.Bot(command_prefix=prefix)
 count = 0
 
 commands = {
-    ".hello": 'Oi seus bostas!',
-    ".joinha": 'Dá um joinha aí porra',
+    ".hello": 'Oi galerinha!',
+    ".joinha": 'Dá um joinha aí, por favor!',
     ".devinha": 'Com certeza é a julinha!',
     ".teclas": '!@#$%¨&*(()_+/?°₢°ºª§ª:;><',
-    ".kill": '¨ÓH, me mataram!!!!¨',
-    ".respawn": '¨ÓH, fui revivido!!!!¨',
     ".comandos": '.hello, .pm, .tilt, .joinha, .devinha, .teclas, Tudo bom, Mike?, .dado',
 }
 
@@ -58,19 +56,19 @@ async def on_message(message):
         return
     
     if message.content.startswith('.pergunta'):
-        await message.channel.send('NÃO TA PRONTO AINDA KRL ╭∩╮( ͡° ل͟ ͡° )╭∩╮ ')
+        await message.channel.send('Não ta pronto ainda galerinha.')
 
     # typed = message.content
 
     # if typed.lower().find('mike') != -1:
     #     for i in words:
     #         if typed.find(i) != -1:
-    #             await message.channel.send('foi otaro')
+    #             await message.channel.send('funcionou')
     #             break
 
 @client.event
 async def on_ready():
-    game = discord.Game(name='A Júlia é batata')
+    game = discord.Game(name='A Júlia é god')
     await client.change_presence(status=discord.Status.online, activity=game)
     print('Logged in as')
     print(client.user.name)
